@@ -1,5 +1,6 @@
 # Caso de Estudio: Dashboard de Tendencias de Videos en YouTube
-Descripción del Proyecto
+
+Descripción del proyecto:
 Como analista de videos publicitarios en la agencia Sterling & Draper, era responsable de detectar qué categorías de videos en YouTube marcaban tendencia para enfocar estrategias de mercadotecnia. Las consultas semanales sobre tendencias por parte de mis colegas motivaron la automatización de este proceso mediante la creación de un dashboard interactivo en Tableau Public.
 
 ## Objetivos del Proyecto
