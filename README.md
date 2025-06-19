@@ -1,184 +1,164 @@
-# Caso de Estudio: Dashboard de Tendencias de Videos en YouTube
+# 📈 Caso de Estudio: Dashboard de Tendencias de Videos en YouTube
 
-## ES Español
+## 🇪🇸 Español
 
-Descripción del proyecto:
+### Descripción del proyecto
 
 Como analista de videos publicitarios en la agencia Sterling & Draper, era responsable de detectar qué categorías de videos en YouTube marcaban tendencia para enfocar estrategias de mercadotecnia. Las consultas semanales sobre tendencias por parte de mis colegas motivaron la automatización de este proceso mediante la creación de un dashboard interactivo en Tableau Public.
 
-## Objetivos del Proyecto
-Identificar categorías de videos en tendencia cada semana.
+### Objetivos del proyecto
 
-Visualizar la distribución de estas categorías por país.
+- Identificar categorías de videos en tendencia cada semana.
+- Visualizar la distribución de estas categorías por país.
+- Detectar qué contenidos fueron particularmente populares en los Estados Unidos.
+- Crear un dashboard intuitivo y dinámico para uso diario por parte del equipo de planificación de marketing.
 
-Detectar qué contenidos fueron particularmente populares en los Estados Unidos.
+### Fuente de datos
 
-Crear un dashboard intuitivo y dinámico para uso diario por parte del equipo de planificación de marketing.
+- **Archivo:** `trending_by_time.csv`
+- **Ubicación:** Base de datos YouTube
 
-## Fuente de Datos
-Archivo: trending_by_time.csv
+**Estructura de la tabla:**
 
-Ubicación: Base de datos youtube
+- `record_id`: ID único del registro  
+- `region`: país o región  
+- `trending_date`: fecha del evento  
+- `category_title`: categoría del video  
+- `videos_count`: número de videos en tendencia  
 
-Estructura de la tabla trending_by_time:
+### Frecuencia de actualización
 
-record_id: ID único del registro
+- Datos actualizados cada 24 horas, a la medianoche UTC.
 
-region: país o región
+### Usuarios del dashboard
 
-trending_date: fecha del evento
+- **Usuarios objetivo:** gerentes de planificación de campañas publicitarias  
+- **Frecuencia de uso esperada:** al menos una vez al día  
 
-category_title: categoría del video
+### Contenido y visualizaciones del dashboard
 
-videos_count: número de videos en tendencia
+| Visualización                                       | Filtro de fecha/hora | Filtro de país |
+|-----------------------------------------------------|----------------------|----------------|
+| Historial de tendencias (valores absolutos)         | ✅                   | ✅             |
+| Historial de tendencias (%)                         | ✅                   | ✅             |
+| Tendencias por país (gráfico de pastel)             | ✅                   | ✅ (si hay múltiples países) |
+| Tendencias por país y categoría (tabla)             | ✅                   | ✅ (con celdas resaltadas)  |
 
-## Frecuencia de Actualización
-Datos actualizados cada 24 horas, a la medianoche UTC.
+### Herramientas utilizadas
 
-## Usuarios del Dashboard
-Usuarios objetivo: gerentes de planificación de campañas publicitarias
+- Tableau Public (visualización y dashboard)
+- Python (pandas) para el procesamiento previo de datos
+- PostgreSQL (simulado localmente)
+- Publicado con acceso abierto en Tableau Public
 
-Frecuencia de uso esperada: al menos una vez al día
+🔗 [Ver Dashboard en Tableau Public](https://public.tableau.com/views/Libro1_17212954380800/Dashboard1?:language=es-ES&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
-## Contenido y Visualizaciones del Dashboard
-Título y descripción del dashboard	Filtro de fecha y hora	Filtro de país
-Gráfico "Historial de tendencias": tendencias de videos divididas por tiempo y categoría (valores absolutos, gráfico de área)	✅ Se puede ajustar el período de análisis por fecha/hora	✅ El filtro afecta todos los gráficos
-Gráfico "Historial de tendencias" (%): proporción de categorías por fecha (gráfico de área con porcentajes)	✅	✅
-Gráfico "Tendencias por país": distribución de tendencias por país (gráfico de pastel con valores relativos)	✅	Aplicable solo si se seleccionan múltiples países
-Tabla "Tendencias por país y categoría": categorías y países cruzados, resaltado por valores absolutos	✅	✅ (Celdas resaltadas según intensidad de valores)
+### Análisis realizado con el dashboard
 
-## Herramientas Utilizadas
-Visualización y dashboard: Tableau Public
+**¿Qué categorías estuvieron más en tendencia?**  
+- Música y entretenimiento dominaron durante la mayoría de las semanas.
 
-Procesamiento de datos previos: Python (Pandas)
+**¿Cómo se distribuyeron por país?**  
+- En India y México, música representó más del 60% de los videos en tendencia.  
+- En EE. UU., la categoría Noticias y Política creció notablemente.
 
-Base de datos: PostgreSQL (simulada para el caso local)
+**¿Qué categorías fueron especialmente populares en EE. UU.?**  
+- Noticias y Política, seguido de Entretenimiento.  
+- En Latinoamérica y Asia, la Música predominó.
 
-Compartición: Publicado en Tableau Public con acceso abierto
+### Insights clave
 
-## Análisis Realizado con el Dashboard
-¿Qué categorías estuvieron más en tendencia?
+- Las categorías más virales varían significativamente por región.
+- Hay patrones estacionales en ciertas categorías (e.g., más noticias en épocas electorales).
+- EE. UU. presenta mayor diversidad de categorías comparado con otros países.
 
-Las categorías de música y entretenimiento dominaron durante la mayoría de las semanas.
+### Resultados y beneficios
 
-¿Cómo se distribuyeron por país?
+- Automatización del análisis semanal, eliminando consultas repetitivas.
+- Segmentación de tendencias en tiempo real.
+- Mejora en la planificación de campañas publicitarias orientadas por datos.
 
-En países como India y México, música representó más del 60% de los videos en tendencia.
+---
 
-En Estados Unidos, la categoría Noticias y Política tuvo un aumento notable.
+# 📈 Case Study: YouTube Video Trends Dashboard
 
-¿Qué categorías fueron especialmente populares en EE. UU.?
+## 🇺🇸 English
 
-Noticias y Política, seguido de Entretenimiento.
+### Project description
 
-En contraste, en Latinoamérica y Asia, Música fue más predominante.
+As an advertising video analyst at Sterling & Draper, I was responsible for identifying trending video categories on YouTube to inform marketing strategies. Weekly requests from colleagues motivated me to automate the process by building an interactive dashboard in Tableau Public.
 
-## Insights Clave
-Las categorías más virales varían significativamente según la región.
+### Project objectives
 
-Hay patrones estacionales en ciertas categorías (e.g., más noticias en épocas electorales).
+- Identify trending video categories each week.
+- Visualize the distribution of these categories by country.
+- Detect which content was particularly popular in the United States.
+- Create an intuitive, dynamic dashboard for daily use by the marketing planning team.
 
-Estados Unidos presenta una diversidad mayor de categorías en comparación con otros países.
+### Data source
 
-## Resultados y Beneficios
-Automatización del análisis semanal, eliminando consultas repetitivas.
+- **File:** `trending_by_time.csv`  
+- **Location:** YouTube database
 
-El dashboard permite segmentar tendencias en tiempo real.
+**Table structure:**
 
-Mejora en la capacidad de planificación de campañas publicitarias orientadas por datos.
+- `record_id`: Unique record ID  
+- `region`: Country or region  
+- `trending_date`: Event date  
+- `category_title`: Video category  
+- `videos_count`: Number of trending videos  
 
-https://public.tableau.com/views/Libro1_17212954380800/Dashboard1?:language=es-ES&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link 
+### Update frequency
 
-# Case Study: YouTube Video Trends Dashboard
+- Data updated every 24 hours at midnight UTC.
 
-## US English
+### Dashboard users
 
-Project description:
+- **Target users:** campaign planning managers  
+- **Expected use frequency:** at least once a day  
 
-As an advertising video analyst at Sterling & Draper, I was responsible for identifying trending video categories on YouTube to inform marketing strategies and our approach. Weekly requests for trend insights from my colleagues motivated me to automate this process by creating an interactive dashboard in Tableau Public.
+### Dashboard content and visualizations
 
-## Project Objectives
-Identify trending video categories each week.
+| Visualization                                       | Date/Time Filter | Country Filter |
+|-----------------------------------------------------|------------------|----------------|
+| Trend History (absolute values, area chart)         | ✅               | ✅             |
+| Trend History (%) (proportional area chart)         | ✅               | ✅             |
+| Trends by Country (pie chart)                       | ✅               | ✅ (if multiple countries) |
+| Trends by Country & Category (highlighted table)    | ✅               | ✅ (cell intensity shading) |
 
-Visualize the distribution of these categories by country.
+### Tools used
 
-Detect which content was particularly popular in the United States.
+- Tableau Public (dashboard & visualization)
+- Python (pandas) for preprocessing
+- PostgreSQL (simulated locally)
+- Shared publicly via Tableau Public
 
-Create an intuitive and dynamic dashboard for daily use by the marketing planning team.
+🔗 [View Dashboard on Tableau Public](https://public.tableau.com/views/Libro1_17212954380800/Dashboard1?:language=es-ES&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
-## Data Source
-File: trending_by_time.csv
+### Analysis performed with the dashboard
 
-Location: YouTube database
+**Which categories were most popular?**  
+- Music and entertainment dominated most weeks.
 
-Structure of the trending_by_time table:
+**How were they distributed by country?**  
+- In India and Mexico, music made up over 60% of trending videos.  
+- In the U.S., News and Politics showed notable growth.
 
-record_id: Unique ID of the record
+**Which categories were especially popular in the U.S.?**  
+- News and Politics, followed by Entertainment.  
+- Music dominated in Latin America and Asia.
 
-region: Country or region
+### Key insights
 
-trending_date: Date of the event
+- Trending categories vary significantly by region.
+- There are seasonal trends (e.g., more news during elections).
+- The U.S. shows more diversity in category trends than other countries.
 
-category_title: Video category
+### Results and benefits
 
-videos_count: Number of trending videos
-
-## Update Frequency
-Data is updated every 24 hours, at midnight UTC.
-
-## Dashboard users
-Target users: advertising campaign planning managers
-
-Expected frequency of use: at least once a day
-
-## Dashboard Content and Visualizations
-Dashboard title and description    Date and time filter    Country filter
-“Trend History” chart: video trends broken down by time and category (absolute values, area chart)    ✅ The analysis period can be adjusted by date/time    ✅ The filter affects all charts
-“Trend History” graph (%): proportion of categories by date (area graph with percentages)    ✅    ✅
-“Trends by country” chart: distribution of trends by country (pie chart with relative values)    ✅    Applicable only if multiple countries are selected
-“Trends by country and category” table: categories and countries crossed, highlighted by absolute values    ✅    ✅ (Cells highlighted according to value intensity)
-
-## Tools Used
-Visualization and dashboard: Tableau Public
-
-Previous data processing: Python (Pandas)
-
-Database: PostgreSQL (simulated for the local case)
-
-Sharing: Published in Tableau Public with open access
-
-## Analysis Performed with the Dashboard
-Which categories were most popular?
-
-Music and entertainment categories dominated most weeks.
-
-How were they distributed by country?
-
-In countries such as India and Mexico, music accounted for more than 60% of trending videos.
-
-In the United States, the News and Politics category saw a notable increase.
-
-Which categories were especially popular in the US?
-
-News and Politics, followed by Entertainment.
-
-In contrast, in Latin America and Asia, Music was more predominant.
-
-## Key Insights
-The most viral categories vary significantly by region.
-
-There are seasonal patterns in certain categories (e.g., more news during election seasons).
-
-The United States has a greater diversity of categories compared to other countries.
-
-## Results and Benefits
-Automation of weekly analysis, eliminating repetitive queries.
-
-The dashboard allows you to segment trends in real-time.
-
-Improved ability to plan data-driven advertising campaigns.
-
-https://public.tableau.com/views/Libro1_17212954380800/Dashboard1?:language=es-ES&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link 
+- Weekly analysis automated, removing repetitive queries.
+- Real-time trend segmentation.
+- Improved campaign planning through data-driven insights.
 
 
 
