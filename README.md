@@ -1,4 +1,7 @@
 # Caso de Estudio: Dashboard de Tendencias de Videos en YouTube
+
+## ES Español
+
 Descripción del proyecto:
 
 Como analista de videos publicitarios en la agencia Sterling & Draper, era responsable de detectar qué categorías de videos en YouTube marcaban tendencia para enfocar estrategias de mercadotecnia. Las consultas semanales sobre tendencias por parte de mis colegas motivaron la automatización de este proceso mediante la creación de un dashboard interactivo en Tableau Public.
@@ -85,3 +88,112 @@ El dashboard permite segmentar tendencias en tiempo real.
 Mejora en la capacidad de planificación de campañas publicitarias orientadas por datos.
 
 https://public.tableau.com/views/Libro1_17212954380800/Dashboard1?:language=es-ES&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link 
+
+# Case Study: YouTube Video Trends Dashboard
+
+## US English
+
+Project description:
+
+As an advertising video analyst at Sterling & Draper, I was responsible for identifying trending video categories on YouTube to inform marketing strategies and our approach. Weekly requests for trend insights from my colleagues motivated me to automate this process by creating an interactive dashboard in Tableau Public.
+
+## Project Objectives
+Identify trending video categories each week.
+
+Visualize the distribution of these categories by country.
+
+Detect which content was particularly popular in the United States.
+
+Create an intuitive and dynamic dashboard for daily use by the marketing planning team.
+
+## Data Source
+File: trending_by_time.csv
+
+Location: YouTube database
+
+Structure of the trending_by_time table:
+
+record_id: Unique ID of the record
+
+region: Country or region
+
+trending_date: Date of the event
+
+category_title: Video category
+
+videos_count: Number of trending videos
+
+## Update Frequency
+Data is updated every 24 hours, at midnight UTC.
+
+## Dashboard users
+Target users: advertising campaign planning managers
+
+Expected frequency of use: at least once a day
+
+## Dashboard Content and Visualizations
+Dashboard title and description    Date and time filter    Country filter
+“Trend History” chart: video trends broken down by time and category (absolute values, area chart)    ✅ The analysis period can be adjusted by date/time    ✅ The filter affects all charts
+“Trend History” graph (%): proportion of categories by date (area graph with percentages)    ✅    ✅
+“Trends by country” chart: distribution of trends by country (pie chart with relative values)    ✅    Applicable only if multiple countries are selected
+“Trends by country and category” table: categories and countries crossed, highlighted by absolute values    ✅    ✅ (Cells highlighted according to value intensity)
+
+## Tools Used
+Visualization and dashboard: Tableau Public
+
+Previous data processing: Python (Pandas)
+
+Database: PostgreSQL (simulated for the local case)
+
+Sharing: Published in Tableau Public with open access
+
+## Analysis Performed with the Dashboard
+Which categories were most popular?
+
+Music and entertainment categories dominated most weeks.
+
+How were they distributed by country?
+
+In countries such as India and Mexico, music accounted for more than 60% of trending videos.
+
+In the United States, the News and Politics category saw a notable increase.
+
+Which categories were especially popular in the US?
+
+News and Politics, followed by Entertainment.
+
+In contrast, in Latin America and Asia, Music was more predominant.
+
+## Key Insights
+The most viral categories vary significantly by region.
+
+There are seasonal patterns in certain categories (e.g., more news during election seasons).
+
+The United States has a greater diversity of categories compared to other countries.
+
+## Results and Benefits
+Automation of weekly analysis, eliminating repetitive queries.
+
+The dashboard allows you to segment trends in real-time.
+
+Improved ability to plan data-driven advertising campaigns.
+
+https://public.tableau.com/views/Libro1_17212954380800/Dashboard1?:language=es-ES&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
